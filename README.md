@@ -164,6 +164,6 @@ It is possible to open workflows (both passed and failed) and look through the _
 
 - Status
 - Total duration
-- Artifacts
+
 
 In _Artifacts_ section there will be a _'playwright-report.zip'_ file. It is possible to download it, extract and open _index.html_ file with the default playwright report.
