@@ -1,4 +1,4 @@
-# penpotqa 
+# penpotqo
 
 QA Test for Penpot
 
