@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Page Not Found</title>
+    <link rel="stylesheet" href="{% static 'dist/css/error.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="error">
+            <div class="error-message">
+                <h1>404</h1>
+                <p>Page Not Found</p>
+            </div>
+            <div class="error-animation">
+                <img src="{% static 'images/404.gif' %}" alt="404 Animation">
+            </div>
+            <a href="/">Back to Home</a>
+        </div>
+    </div>
+
+    <script src="{% static 'dist/js/error.js' %}"></script>
+</body>
+</html>

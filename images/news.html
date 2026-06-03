@@ -1,0 +1,134 @@
+{% extends 'news/base.html' %}
+{% load static %}
+{% load i18n %}
+{% load hitcount_tags %}
+
+{% block title %} {{ news.title }} {% endblock title %}
+
+{% block content %}
+
+<div class="container-fluid mt-5 mb-3 pt-3">
+    <div class="container">
+        <div class="section-title border-right-0 mb-0">
+            <h4>{{ news.title }}</h4>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid">
+<div class="container">
+<div class="row">
+
+<!-- LEFT SIDE -->
+    <div class="col-lg-8">
+        <div class="position-relative mb-3">
+            <img class="img-fluid w-100" src="{{ news.image.url }}" style="object-fit: cover;">
+            <div class="bg-white border border-top-0 p-4">
+                <div class="mb-3">
+                    <span class="badge badge-primary p-2">
+                        {{ news.publish_time }}
+                    </span>
+                </div>
+
+                <h4 class="mb-3 text-secondary text-uppercase font-weight-bold">
+                    {{ news.title }}
+                </h4>
+                <p>{{ news.body }}</p>
+            </div>
+            <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                <div class="d-flex align-items-center">
+                    <span class="ml-3">
+                        <i class="far fa-eye mr-2"></i>
+                    </span>
+                    <span class="ml-3">
+                        <i class="far fa-comment mr-2"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+<!-- COMMENTS -->
+        <div class="mb-3">
+            <div class="bg-white border border-top-0 p-4 mb-2">
+                <h5></h5>
+                <p></p>
+                <small></small>
+            </div>
+            <hr>
+
+            <div class="section-title mb-0">
+                <h4 class="m-0 text-uppercase font-weight-bold">Fikr qoldirish</h4>
+            </div>
+
+
+            <div class="bg-white border border-top-0 p-4">
+                <form method="post">
+                    <div class="form-group">
+                        <label>Xabar</label>
+                        <textarea name="body" rows="5" class="form-control"></textarea>
+                        <br>
+                        <button type="submit" class="btn btn-primary">
+                            Yuborish
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="bg-white border border-top-0 p-4">
+                <h5>
+                    Ro'yxatdan o'tmagansiz
+                    <a href="{% url 'login' %}">Kirish</a>
+                    yoki
+                    <a href="{% url 'user_register' %}">Ro'yxatdan o'tish</a>
+                </h5>
+            </div>
+        </div>
+    </div>
+
+
+<!-- RIGHT SIDE -->
+    <div class="col-lg-4">
+        <div class="mb-3">
+            <div class="section-title mb-0">
+                <h4 class="m-0 text-uppercase font-weight-bold">Tavsiya etamiz</h4>
+            </div>
+            <div class="bg-white border border-top-0 p-3">
+                <div class="d-flex align-items-center bg-white mb-3" style="height:110px;">
+                    <img class="img-fluid"
+                         style="width:110px;height:110px;"
+                         src="{{ news.image.url }}">
+                    <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
+                        <div class="mb-2">
+                            <a class="badge badge-primary p-1"
+                               href="{{ news.get_absolute_url }}">
+                                Batafsil
+                            </a>
+                        </div>
+
+                        <a class="h6 m-0 text-secondary text-uppercase font-weight-bold"
+                           href="{{ news.get_absolute_url }}">
+                            {{ news.title|truncatewords:4 }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<div class="container mt-4">
+    <a class="btn btn-info" href="{% url 'news_create' %}">
+        Yangilik qo'shish
+    </a>
+    <a class="btn btn-success" href="{% url 'news_update' news.slug %}">
+        Tahrirlash
+    </a>
+    <a class="btn btn-danger" href="{% url 'news_delete' news.slug %}">
+        O'chirish
+    </a>
+</div>
+{% endif %}
+{% endblock content %}

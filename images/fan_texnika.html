@@ -1,0 +1,432 @@
+{% extends 'news/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+{% blocktrans %} Fan-texnika Yangiliklari {% endblocktrans %}
+{% endblock title %}
+
+{% block content %}
+<!-- News With Sidebar Start -->
+<div class="container-fluid mt-5 pt-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="section-title">
+                            <h4 class="m-0 text-uppercase font-weight-bold">{% blocktrans %} Fan-texnika yangiliklari {% endblocktrans %}</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative mb-3">
+                            <img class="img-fluid w-" style="width:363px; height:181px;" src="{{ fannews.1.image.url }}"
+                                 style="object-fit: cover;">
+                            <div class="bg-white border border-top-0 p-4">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                       href="{{ fannews.1.get_absolute_url }}">{% blocktrans %} Batafsil {% endblocktrans %}</a>
+                                    <a class="text-body"><small>{{ fannews.1.publish_time }}</small></a>
+                                </div>
+                                <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{{ fannews.1.get_absolute_url }}">{{ fannews.1.title | truncatewords:3 }}</a>
+                                <p class="m-0">{{ fannews.1.body | truncatewords:7 }}</p>
+                            </div>
+                            <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                                <div class="d-flex align-items-center">
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <small class="ml-3"><i class="far fa-eye mr-2"></i>12345</small>
+                                    <small class="ml-3"><i class="far fa-comment mr-2"></i>123</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative mb-3">
+                            <img class="img-fluid w-" style="width:363px; height:181px;" src="{{ fannews.2.image.url }}"
+                                 style="object-fit: cover;">
+                            <div class="bg-white border border-top-0 p-4">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                       href="{{ fannews.2.get_absolute_url }}">{% blocktrans %} Batafsil {% endblocktrans %}</a>
+                                    <a class="text-body"><small>{{ fannews.2.publish_time }}</small></a>
+                                </div>
+                                <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold" href="{{ fannews.2.get_absolute_url }}">{{ fannews.2.title | truncatewords:3 }}</a>
+                                <p class="m-0">{{ fannews.2.body | truncatewords:7 }}</p>
+                            </div>
+                            <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                                <div class="d-flex align-items-center">
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <small class="ml-3"><i class="far fa-eye mr-2"></i>12345</small>
+                                    <small class="ml-3"><i class="far fa-comment mr-2"></i>123</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative mb-3">
+                            <img class="img-fluid " style="width:363px; height:181px;" src="{{ fannews.3.image.url }}"
+                                 style="object-fit: cover;">
+                            <div class="bg-white border border-top-0 p-4">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                       href="{{ fannews.3.get_absolute_url }}">{% blocktrans %} Batafsil {% endblocktrans %}</a>
+                                    <a class="text-body"><small>{{ fannews.3.publish_time }}</small></a>
+                                </div>
+                                <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{{ fannews.3.get_absolute_url }}">{{ fannews.3.title | truncatewords:4 }}</a>
+                            </div>
+                            <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                                <div class="d-flex align-items-center">
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <small class="ml-3"><i class="far fa-eye mr-2"></i>12345</small>
+                                    <small class="ml-3"><i class="far fa-comment mr-2"></i>123</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative mb-3">
+                            <img class="img-fluid w-" style="width:363px; height:181px;" src="{{ fannews.4.image.url }}"
+                                 style="object-fit: cover;">
+                            <div class="bg-white border border-top-0 p-4">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                       href="{{ fannews.4.get_absolute_url }}">{% blocktrans %} Batafsil {% endblocktrans %}</a>
+                                    <a class="text-body"><small>{{ fannews.4.publish_time }}</small></a>
+                                </div>
+                                <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{{ fannews.4.get_absolute_url }}">{{ fannews.4.title | truncatewords:3 }}</a>
+                            </div>
+                            <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                                <div class="d-flex align-items-center">
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <small class="ml-3"><i class="far fa-eye mr-2"></i>12345</small>
+                                    <small class="ml-3"><i class="far fa-comment mr-2"></i>123</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative mb-3">
+                            <img class="img-fluid w-" style="width:363px; height:181px;" src="{{ fannews.5.image.url }}"
+                                 style="object-fit: cover;">
+                            <div class="bg-white border border-top-0 p-4">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                       href="{{ fannews.5.get_absolute_url }}">{% blocktrans %} Batafsil {% endblocktrans %}</a>
+                                    <a class="text-body"><small>{{ fannews.5.publish_time }}</small></a>
+                                </div>
+                                <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{{ fannews.5.get_absolute_url }}">{{ fannews.5.title | truncatewords:2 }}</a>
+                            </div>
+                            <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                                <div class="d-flex align-items-center">
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <small class="ml-3"><i class="far fa-eye mr-2"></i>12345</small>
+                                    <small class="ml-3"><i class="far fa-comment mr-2"></i>123</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative mb-3">
+                            <img class="img-fluid w-" style="width:363px; height:181px;" src="{{ fannews.6.image.url }}"
+                                 style="object-fit: cover;">
+                            <div class="bg-white border border-top-0 p-4">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                       href="{{ fannews.6.get_absolute_url }}">{% blocktrans %} Batafsil {% endblocktrans %}</a>
+                                    <a class="text-body"><small>{{ fannews.6.publish_time }}</small></a>
+                                </div>
+                                <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{{ fannews.6.get_absolute_url }}">{{ fannews.6.title | truncatewords:3 }}</a>
+                            </div>
+                            <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                                <div class="d-flex align-items-center">
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <small class="ml-3"><i class="far fa-eye mr-2"></i>12345</small>
+                                    <small class="ml-3"><i class="far fa-comment mr-2"></i>123</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="col-lg-6">
+                        <div class="position-relative mb-3">
+                            <img class="img-fluid w-" style="width:363px; height:181px;" src="{{ fannews.7.image.url }}"
+                                 style="object-fit: cover;">
+                            <div class="bg-white border border-top-0 p-4">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                       href="{{ fannews.7.get_absolute_url }}">{% blocktrans %} Batafsil {% endblocktrans %}</a>
+                                    <a class="text-body"><small>{{ fannews.7.publish_time }}</small></a>
+                                </div>
+                                <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{{ fannews.7.get_absolute_url }}">{{ fannews.7.title | truncatewords:3 }}</a>
+                            </div>
+                            <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                                <div class="d-flex align-items-center">
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <small class="ml-3"><i class="far fa-eye mr-2"></i>12345</small>
+                                    <small class="ml-3"><i class="far fa-comment mr-2"></i>123</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative mb-3">
+                            <img class="img-fluid w-" style="width:363px; height:181px;" src="{{ fannews.8.image.url }}"
+                                 style="object-fit: cover;">
+                            <div class="bg-white border border-top-0 p-4">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                       href="{{ fannews.8.get_absolute_url }}">{% blocktrans %} Batafsil {% endblocktrans %}</a>
+                                    <a class="text-body"><small>{{ fannews.8.publish_time }}</small></a>
+                                </div>
+                                <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{{ fannews.8.get_absolute_url }}">{{ fannews.8.title | truncatewords:4 }}</a>
+                            </div>
+                            <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                                <div class="d-flex align-items-center">
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <small class="ml-3"><i class="far fa-eye mr-2"></i>12345</small>
+                                    <small class="ml-3"><i class="far fa-comment mr-2"></i>123</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative mb-3">
+                            <img class="img-fluid w-" style="width:363px; height:181px;" src="{{ fannews.9.image.url }}"
+                                 style="object-fit: cover;">
+                            <div class="bg-white border border-top-0 p-4">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                       href="{{ fannews.9.get_absolute_url }}">{% blocktrans %} Batafsil {% endblocktrans %}</a>
+                                    <a class="text-body"><small>{{ fannews.9.publish_time }}</small></a>
+                                </div>
+                                <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{{ fannews.9.get_absolute_url }}">{{ fannews.9.title | truncatewords:4 }}</a>
+                            </div>
+                            <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                                <div class="d-flex align-items-center">
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <small class="ml-3"><i class="far fa-eye mr-2"></i>12345</small>
+                                    <small class="ml-3"><i class="far fa-comment mr-2"></i>123</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative mb-3">
+                            <img class="img-fluid w-" style="width:363px; height:181px;" src="{{ fannews.10.image.url }}"
+                                 style="object-fit: cover;">
+                            <div class="bg-white border border-top-0 p-4">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                       href="{{ fannews.10.get_absolute_url }}">{% blocktrans %} Batafsil {% endblocktrans %}</a>
+                                    <a class="text-body"><small>{{ fannews.10.publish_time }}</small></a>
+                                </div>
+                                <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{{ fannews.10.get_absolute_url }}">{{ fannews.10.title | truncatewords:4 }}</a>
+                            </div>
+                            <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                                <div class="d-flex align-items-center">
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <small class="ml-3"><i class="far fa-eye mr-2"></i>12345</small>
+                                    <small class="ml-3"><i class="far fa-comment mr-2"></i>123</small>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-lg-6">
+                        <div class="position-relative mb-3">
+                            <img class="img-fluid w-" style="width:363px; height:181px;" src="{{ fannews.11.image.url }}"
+                                 style="object-fit: cover;">
+                            <div class="bg-white border border-top-0 p-4">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                       href="{{ fannews.11.get_absolute_url }}">{% blocktrans %} Batafsil {% endblocktrans %}</a>
+                                    <a class="text-body"><small>{{ fannews.11.publish_time }}</small></a>
+                                </div>
+                                <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{{ fannews.11.get_absolute_url }}">{{ fannews.11.title | truncatewords:4 }}</a>
+                            </div>
+                            <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                                <div class="d-flex align-items-center">
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <small class="ml-3"><i class="far fa-eye mr-2"></i>12345</small>
+                                    <small class="ml-3"><i class="far fa-comment mr-2"></i>123</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="position-relative mb-3">
+                            <img class="img-fluid w-" style="width:363px; height:181px;" src="{{ fannews.12.image.url }}"
+                                 style="object-fit: cover;">
+                            <div class="bg-white border border-top-0 p-4">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                       href="{{ fannews.12.get_absolute_url }}">{% blocktrans %} Batafsil {% endblocktrans %}</a>
+                                    <a class="text-body"><small>{{ fannews.12.publish_time }}</small></a>
+                                </div>
+                                <a class="h4 d-block mb-0 text-secondary text-uppercase font-weight-bold" href="{{ fannews.12.get_absolute_url }}">{{ fannews.12.title | truncatewords:5 }}</a>
+                            </div>
+                            <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                                <div class="d-flex align-items-center">
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <small class="ml-3"><i class="far fa-eye mr-2"></i>12345</small>
+                                    <small class="ml-3"><i class="far fa-comment mr-2"></i>123</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <!-- Social Follow Start -->
+                <div class="mb-3">
+                    <div class="section-title mb-0">
+                        <h4 class="m-0 text-uppercase font-weight-bold">{% blocktrans %} Obuna bo'ling {% endblocktrans %}</h4>
+                    </div>
+                    <div class="bg-white border border-top-0 p-3">
+                        <a href="" class="d-block w-100 text-white text-decoration-none mb-3"
+                           style="background: #39569E;">
+                            <i class="fab fa-facebook-f text-center py-4 mr-3"
+                               style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
+                            <span class="font-weight-medium">12,345 Fans</span>
+                        </a>
+                        <a href="" class="d-block w-100 text-white text-decoration-none mb-3"
+                           style="background: #52AAF4;">
+                            <i class="fab fa-twitter text-center py-4 mr-3"
+                               style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
+                            <span class="font-weight-medium">12,345 Followers</span>
+                        </a>
+                        <a href="" class="d-block w-100 text-white text-decoration-none mb-3"
+                           style="background: #0185AE;">
+                            <i class="fab fa-linkedin-in text-center py-4 mr-3"
+                               style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
+                            <span class="font-weight-medium">12,345 Connects</span>
+                        </a>
+                        <a href="" class="d-block w-100 text-white text-decoration-none mb-3"
+                           style="background: #C8359D;">
+                            <i class="fab fa-instagram text-center py-4 mr-3"
+                               style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
+                            <span class="font-weight-medium">12,345 Followers</span>
+                        </a>
+                        <a href="" class="d-block w-100 text-white text-decoration-none mb-3"
+                           style="background: #DC472E;">
+                            <i class="fab fa-youtube text-center py-4 mr-3"
+                               style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
+                            <span class="font-weight-medium">12,345 Subscribers</span>
+                        </a>
+                        <a href="" class="d-block w-100 text-white text-decoration-none" style="background: #055570;">
+                            <i class="fab fa-vimeo-v text-center py-4 mr-3"
+                               style="width: 65px; background: rgba(0, 0, 0, .2);"></i>
+                            <span class="font-weight-medium">12,345 Followers</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Social Follow End -->
+
+                <!-- Ads Start -->
+                <div class="mb-3">
+                    <div>
+                        <a href="https://nout.uz/"><img style="width:500px; height:200px;" class="img-fluid" src="{% static 'img/news-reklama.png' %}" alt=""></a>
+                    </div>
+                </div>
+                <!-- Ads End -->
+
+                <!-- Popular News Start -->
+                <div class="mb-3">
+                    <div class="section-title mb-0">
+                        <h4 class="m-0 text-uppercase font-weight-bold">{% blocktrans %} Ommabop Yangiliklar  {% endblocktrans %}</h4>
+                    </div>
+                    <div class="bg-white border border-top-0 p-3">
+                        <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
+                            <img class="img-fluid" style="width:110px; height:110px;" src="{{ fannews.1.image.url }}" alt="">
+                            <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+                                       href="{{ fannews.1.get_absolute_url }}">{% blocktrans %} Batafsil {% endblocktrans %}</a>
+                                    <a class="text-body"><small>{{ fannews.1.publish_time }}</small></a>
+                                </div>
+                                <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="{{ fannews.1.get_absolute_url }}">{{ fannews.1.title | truncatewords:2 }}</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
+                            <img class="img-fluid" style="width:110px; height:110px;" src="{{ fannews.2.image.url }}" alt="">
+                            <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+                                       href="{{ fannews.2.get_absolute_url }}">{% blocktrans %} Batafsil {% endblocktrans %}</a>
+                                    <a class="text-body"><small>{{ fannews.2.publish_time }}</small></a>
+                                </div>
+                                <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="{{ fannews.2.get_absolute_url }}">{{ fannews.2.title | truncatewords:4 }}</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
+                            <img class="img-fluid" style="width:110px; height:110px;" src="{{ fannews.3.image.url }}" alt="">
+                            <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+                                       href="{{ fannews.3.get_absolute_url }}">{% blocktrans %} Batafsil {% endblocktrans %}</a>
+                                    <a class="text-body"><small>{{ fannews.3.publish_time }}</small></a>
+                                </div>
+                                <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="{{ fannews.4.get_absolute_url }}">{{ fannews.3.title | truncatewords:4 }}</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
+                            <img class="img-fluid" style="width:110px; height:110px;" src="{{ fannews.4.image.url }}" alt="">
+                            <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+                                       href="{{ fannews.4.get_absolute_url }}">{% blocktrans %} Batafsil {% endblocktrans %}</a>
+                                    <a class="text-body"><small>{{ fannews.4.publish_time }}</small></a>
+                                </div>
+                                <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="{{ fannews.4.get_absolute_url }}">{{ fannews.4.title | truncatewords:4 }}</a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center bg-white mb-3" style="height: 110px;">
+                            <img class="img-fluid" style="width:110px; height:110px;" src="{{ fannews.5.image.url }}" alt="">
+                            <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
+                                <div class="mb-2">
+                                    <a class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
+                                       href="{{ fannews.5.get_absolute_url }}">{% blocktrans %} Batafsil {% endblocktrans %}</a>
+                                    <a class="text-body"><small>{{ fannews.5.publish_time }}</small></a>
+                                </div>
+                                <a class="h6 m-0 text-secondary text-uppercase font-weight-bold" href="{{ fannews.5.get_absolute_url }}">{{ fannews.5.title | truncatewords:4 }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Popular News End -->
+
+                <!-- Tags Start -->
+                <hr>
+                <div class="mb-3">
+                    <div class="section-title mb-0">
+                        <h4 class="m-0 text-uppercase font-weight-bold">Bo'limlar</h4>
+                    </div>
+                    <div class="bg-white border border-top-0 p-3">
+                        <div class="d-flex flex-wrap m-n1">
+                            <a class="btn btn-sm btn-outline-secondary m-1" href="{% url 'Uzbekistan' %}">O'zbekiston</a>
+                            <a class="btn btn-sm btn-outline-secondary m-1" href="{% url 'Jahon' %}">Jahon</a>
+                            <a class="btn btn-sm btn-outline-secondary m-1" href="{% url 'Sport' %}">Sport</a>
+                            <a class="btn btn-sm btn-outline-secondary m-1" href="{% url 'Fan_texnika' %}">Fan-texnika</a>
+                            <a class="btn btn-sm btn-outline-secondary m-1" href="{% url 'Iqtisodiyot' %}">Iqtisodiyot</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tags End -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- News With Sidebar End -->
+
+
+{% endblock content %}

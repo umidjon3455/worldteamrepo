@@ -1,0 +1,50 @@
+{% extends 'news/base.html' %}
+{% load static %}
+{% load i18n %}
+{% load hitcount_tags %}
+
+{% block title %}
+{% blocktrans %} Natijalar {% endblocktrans %}
+{% endblock %}
+{% block content %}
+
+<div class="col-12">
+    <div class="section-title">
+        <h4 class="m-0 text-uppercase font-weight-bold">Qidiruv Natijalari</h4>
+    </div>
+</div>
+<div class="container-fluid mt-5 pt-3">
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                {% for news in all_news %}
+                <div class="col-lg-6">
+                    <div class="position-relative mb-3">
+                        <img class="img-fluid w-" style="width:600px; height:381px;"
+                             src="{{ news.image.url }}"
+                             style="object-fit: cover;">
+                        <div class="bg-white border border-top-0 p-4">
+                            <div class="mb-2">
+                                <a class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
+                                   href="{{ news.get_absolute_url }}">{% blocktrans %} Batafsil {% endblocktrans %}</a>
+                                <a class="text-body"><small>{{ news.publish_time }}</small></a>
+                            </div>
+                            <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold"
+                               href="{{ news.get_absolute_url }}">{{ news.title | truncatewords:3 }}</a>
+                            <p class="m-0">{{ news.body | truncatewords:50 }}</p>
+                        </div>
+                        <div class="d-flex justify-content-between bg-white border border-top-0 p-4">
+                            <div class="d-flex align-items-center">
+                                <small class="ml-3"><i class="far fa-eye mr-2"></i>12345</small>
+                                <small class="ml-3"><i class="far fa-comment mr-2"></i>123</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

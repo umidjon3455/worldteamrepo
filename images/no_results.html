@@ -1,0 +1,19 @@
+{% extends 'news/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}
+{% blocktrans %} Natija Topilmadi {% endblocktrans %}
+{% endblock title %}
+
+{% block content %}
+
+<link href="{% static 'dist/css/no_results.css' %}" rel="stylesheet">
+<div class="container">
+    <h2>Bunaqa Xabar topilmadi!</h2>
+    <p>Kechirasiz,Bunday:<span class="query">{{ query }}</span> so'rov uchun hech qanday natija topilmadi:</p>
+    <a href="{% url 'homepage' %}" class="btn">Bosh Sahifaga Qaytishg</a>
+</div>
+
+
+{% endblock content %}
