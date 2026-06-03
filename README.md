@@ -4,7 +4,7 @@ QA Test for Penpot
 
 Based on Playwright framework.
 
-**1. Initial requirements and configuration.**
+**1. Initial requirements and configuration**
 
 Prerequisites for local run:
 
